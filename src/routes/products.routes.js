@@ -33,25 +33,6 @@ const router = Router();
  *                   type: array
  *                   items:
  *                     $ref: "#/components/schemas/request_product"
- * /api/v1/products:
- *   get:
- *     summary: See the data of a product in the app
- *     tags: [Products]
- *     responses:
- *       200:
- *         description: Data displayed successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: OK
- *                 data:
- *                   type: array
- *                   items:
- *                     $ref: "#/components/schemas/request_product"
  */
 
 router.get("/products", getProducts);
