@@ -8,7 +8,7 @@ const router = Router();
 
 /**
  * @openapi
- * /api/v1//cart/{id}/{productId}:
+ * /api/v1/cart/{id}/{productId}:
  *   post:
  *     summary: add product to cart 
  *     tags: [Cart]

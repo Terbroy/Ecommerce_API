@@ -8,7 +8,7 @@ const getProducts = async (req, res, next) => {
     const allProducts = await ProductServices.getAll(offset, limit);
     const productsAvailable = [];
     allProducts.forEach(e=>{
-        if(e.availableQty !== 0){
+        if(e.availableQty > 0){
             productsAvailable.push(e)
         }
     })
