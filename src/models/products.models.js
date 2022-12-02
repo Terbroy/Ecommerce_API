@@ -11,12 +11,12 @@ const db = require("../utils/database");
  *         name:
  *           type: string
  *           example: Televisor
- *         price:
- *           type: number
- *           example: 500
  *         image:
  *           type: string
  *           example: https://google.com
+ *         price:
+ *           type: number
+ *           example: 500
  *         availableQty:
  *           type: number
  *           example: 8
@@ -32,12 +32,12 @@ const db = require("../utils/database");
  *         name:
  *           type: string
  *           example: Televisor
- *         price:
- *           type: number
- *           example: 500
  *         image:
  *           type: string
  *           example: https://google.com
+ *         price:
+ *           type: number
+ *           example: 500
  *         availableQty:
  *           type: number
  *           example: 6

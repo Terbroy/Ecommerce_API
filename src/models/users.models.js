@@ -44,15 +44,15 @@ const bcrypt = require("bcrypt");
  *           example: Teresa Saavedra
  *         email:
  *           type: string
- *           example: josedaniel37@gmail.com
+ *           example: Teresa@gmail.com
  *         token:
  *           type: string
  *           example: "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2VkYW5pZWxAZ21haWwuY29tIiwiaWQiOjQsImlhdCI6"
  *   securitySchemes:
- *     bearerAuth:
- *       type: http
- *       scheme: Bearer
- *       bearerFormat: JWT
+ *      bearerAuth:
+ *        type: http
+ *        scheme: Bearer
+ *        bearerFormat: JWT
  */
 
 const Users = db.define('users', {

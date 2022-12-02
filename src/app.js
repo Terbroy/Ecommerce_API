@@ -32,7 +32,7 @@ transporter
 app.get('/', (req, res) => {
     res.status(200).json({
         status: "Respuesta exitosa",
-        description: "Prueva esta API con SWAGGER en el siguiente 'link'", 
+        description: "Prueba esta API con SWAGGER en el siguiente 'link'", 
         link: process.env.HOST,
     });
 })

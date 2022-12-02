@@ -33,6 +33,24 @@ const router = Router();
  *                   type: array
  *                   items:
  *                     $ref: "#/components/schemas/request_product"
+ *   get:
+ *     summary: Get all products
+ *     tags: [Products]
+ *     responses:
+ *       201:
+ *         description: Data displayed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: "#/components/schemas/request_product"
  */
 
 router.get("/products", getProducts);
