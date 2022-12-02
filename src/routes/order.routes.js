@@ -64,7 +64,7 @@ const router = Router();
  */
 
 
-router.post("/order/:cartId",authentication , createOrder);
-router.get("/order/:userId",authentication , getOrders);
+router.post("/order/:cartId",/*authentication,*/ createOrder);
+router.get("/order/:userId",/*authentication,*/ getOrders);
 
 module.exports = router;

@@ -71,7 +71,7 @@ const router = Router();
  *                     $ref: "#/components/schemas/request_cart"
  */
 
-router.post("/cart/:id/:productId", authentication, addProduct);
-router.get("/cart/:id", authentication, getCart);
+router.post("/cart/:id/:productId" /*authentication,*/, addProduct);
+router.get("/cart/:id",/*authentication,*/ getCart);
 
 module.exports = router;

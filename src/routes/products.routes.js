@@ -54,6 +54,6 @@ const router = Router();
  */
 
 router.get("/products", getProducts);
-router.post("/products", authentication, createProduct);
+router.post("/products", /*authentication,*/ createProduct);
 
 module.exports = router;

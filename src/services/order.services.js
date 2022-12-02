@@ -17,10 +17,14 @@ class OrderServices {
                     quantity: e.quantity,
                     price: e.price,
                 });
-                e.update({status:"bought"})
+                e.destroy()
                 product.update({availableQty: product.availableQty - e.quantity});
             })
-            cart.update({status:"purchased"});
+            cart.update({
+                status:"purchased",
+                totalPrice: 0,
+            });
+
             return order
 
                 

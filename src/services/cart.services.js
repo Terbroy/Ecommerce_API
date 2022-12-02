@@ -6,7 +6,7 @@ class CartServices {
             const containProduct = await ProductInCart.findOne({where: {cartId, productId }})
             const product = await Products.findOne({where:{id:productId}});
             const {price, availableQty, status} = product;
-                if(containProduct && product.availableQty !==0){
+                if(containProduct && product.availableQty > 0){
                     if(availableQty !== containProduct.quantity){
                     const result = containProduct.update({
                         price: containProduct.price+price,
@@ -16,7 +16,7 @@ class CartServices {
                     }else{
                         return({message: 'no hay mas stock'});
                     }
-                }else if (product.availableQty !==0){
+                }else if (product.availableQty > 0){
                     const result = ProductInCart.create({
                         cartId,
                         productId,
