@@ -1,6 +1,34 @@
 const { DataTypes } = require("sequelize");
 const db = require("../utils/database");
 
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     request_cart:
+ *       type: object
+ *       properties:
+ *         cartId:
+ *           type: number
+ *           example: 1
+ *         productId:
+ *           type: string
+ *           example: 1
+ *         quantity:
+ *           type: number
+ *           example: 3
+ *         price:
+ *           type: number
+ *           example: 12000
+ *         status:
+ *           type: boolean
+ *           example: true
+ *     securitySchemes:
+ *       bearerAuth:
+ *         type: http
+ *         scheme: Bearer
+ *         bearerFormat: JWT
+ */
 
 const ProductInCart = db.define('productInCart', {
     id:{
