@@ -9,6 +9,8 @@ const router = Router();
  * @openapi
  * /api/v1/order/{cartId}:
  *   post:
+ *     security:
+ *       - bearerAuth: []
  *     summary: Create a order in the app
  *     tags: [Order]
  *     parameters:
@@ -66,7 +68,7 @@ const router = Router();
  */
 
 
-router.post("/order/:cartId",/*authentication,*/ createOrder);
+router.post("/order/:cartId", authentication, createOrder);
 router.get("/order/:userId", authentication, getOrders);
 
 module.exports = router;

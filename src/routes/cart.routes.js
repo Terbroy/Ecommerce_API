@@ -11,6 +11,8 @@ const router = Router();
  * @openapi
  * /api/v1/cart/{id}/{productId}:
  *   post:
+ *     security:
+ *       - bearerAuth: []
  *     summary: add product to cart 
  *     tags: [Cart]
  *     parameters:
@@ -74,7 +76,7 @@ const router = Router();
  *                     $ref: "#/components/schemas/request_cart"
  */
 
-router.post("/cart/:id/:productId" /*authentication,*/, addProduct);
+router.post("/cart/:id/:productId" ,authentication, addProduct);
 router.get("/cart/:id", authentication, getCart);
 
 module.exports = router;

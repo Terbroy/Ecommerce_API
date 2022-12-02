@@ -9,6 +9,8 @@ const router = Router();
  * @openapi
  * /api/v1/products:
  *   post:
+ *     security:
+ *       - bearerAuth: []
  *     summary: Create a new product
  *     tags: [Products]
  *     requestBody:
@@ -56,6 +58,6 @@ const router = Router();
  */
 
 router.get("/products", authentication, getProducts);
-router.post("/products", /*authentication,*/ createProduct);
+router.post("/products", authentication, createProduct);
 
 module.exports = router;
