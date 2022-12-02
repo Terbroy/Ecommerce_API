@@ -36,6 +36,8 @@ const router = Router();
  *                     $ref: "#/components/schemas/request_order"
  * /api/v1/order/{userId}:
  *   get:
+ *     security:
+ *       - bearerAuth: []
  *     summary: See the data of the users orders in the app
  *     tags: [Order]
  *     parameters:
@@ -65,6 +67,6 @@ const router = Router();
 
 
 router.post("/order/:cartId",/*authentication,*/ createOrder);
-router.get("/order/:userId",/*authentication,*/ getOrders);
+router.get("/order/:userId", authentication, getOrders);
 
 module.exports = router;

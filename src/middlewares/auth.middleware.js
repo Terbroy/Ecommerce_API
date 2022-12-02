@@ -16,7 +16,9 @@ const authentication = (req, res, next) => {
             errorContent: error
         })
        }
-    };
+    } else{
+        res.json({message: "no se encontro el Token"})
+    }
 };
 
 module.exports = authentication;

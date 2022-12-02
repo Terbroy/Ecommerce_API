@@ -34,6 +34,8 @@ const router = Router();
  *                   items:
  *                     $ref: "#/components/schemas/request_product"
  *   get:
+ *     security:
+ *       - bearerAuth: []
  *     summary: Get all products
  *     tags: [Products]
  *     responses:
@@ -53,7 +55,7 @@ const router = Router();
  *                     $ref: "#/components/schemas/request_product"
  */
 
-router.get("/products", getProducts);
+router.get("/products", authentication, getProducts);
 router.post("/products", /*authentication,*/ createProduct);
 
 module.exports = router;

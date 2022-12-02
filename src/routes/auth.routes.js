@@ -8,7 +8,7 @@ const router = Router();
  * /api/v1/auth/login:
  *   post:
  *     summary: Start session in the app
- *     tags: [Users]
+ *     tags: [Login]
  *     requestBody:
  *       description: Start session for do funcionalitys.
  *       required: true

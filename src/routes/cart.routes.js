@@ -6,6 +6,7 @@ const authentication = require("../middlewares/auth.middleware");
 const router = Router();
 
 
+
 /**
  * @openapi
  * /api/v1/cart/{id}/{productId}:
@@ -44,6 +45,8 @@ const router = Router();
  *                     $ref: "#/components/schemas/request_cart"
  * /api/v1/cart/{id}:
  *    get:
+ *     security:
+ *       - bearerAuth: []
  *     summary: See the data of a cart 
  *     tags: [Cart]
  *     parameters:
@@ -72,6 +75,6 @@ const router = Router();
  */
 
 router.post("/cart/:id/:productId" /*authentication,*/, addProduct);
-router.get("/cart/:id",/*authentication,*/ getCart);
+router.get("/cart/:id", authentication, getCart);
 
 module.exports = router;
